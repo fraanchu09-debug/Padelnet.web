@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PADELNET ULTRA - Premier Padel</title>
+<title>PADELNET 2026 - Portal Oficial</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
 body{display:flex;min-height:100vh;background:#0ea5e9}
 
-/* SIDEBAR */
+/* MENU */
 .sidebar{
-width:260px;
+width:270px;
 background:linear-gradient(#0284c7,#f97316);
 color:white;
 padding:20px;
@@ -24,11 +24,11 @@ gap:10px;
 
 .menu{
 padding:10px;
-background:rgba(255,255,255,0.15);
 border-radius:10px;
+background:rgba(255,255,255,0.15);
 cursor:pointer;
+font-size:14px;
 }
-
 .menu:hover{background:rgba(255,255,255,0.3)}
 
 /* CONTINGUT */
@@ -52,10 +52,10 @@ margin-bottom:15px;
 .card{
 background:white;
 padding:15px;
+border-radius:15px;
 margin-bottom:15px;
 border-left:6px solid #f97316;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
-border-radius:12px;
 line-height:1.6;
 }
 
@@ -100,175 +100,173 @@ cursor:pointer;
 
 <!-- MENU -->
 <div class="sidebar">
-<h1>PADELNET</h1>
+<h1>PADELNET 2026</h1>
 
-<div class="menu" onclick="show('home')">Inici</div>
-<div class="menu" onclick="show('what')">Què és Premier Padel</div>
-<div class="menu" onclick="show('structure')">Estructura</div>
-<div class="menu" onclick="show('ranking')">Rànquing</div>
-<div class="menu" onclick="show('players')">Jugadors</div>
-<div class="menu" onclick="show('calendar')">Calendari</div>
-<div class="menu" onclick="show('history')">Història</div>
-<div class="menu" onclick="show('game')">Joc</div>
+<div class="menu" onclick="show('news')">📰 Notícies</div>
+<div class="menu" onclick="show('players')">🥇 Jugadors</div>
+<div class="menu" onclick="show('ranking')">📊 Rànquing</div>
+<div class="menu" onclick="show('structure')">🏆 Circuit</div>
+<div class="menu" onclick="show('history')">📜 Història</div>
+<div class="menu" onclick="show('game')">🎮 Joc</div>
 </div>
 
 <!-- CONTINGUT -->
 <div class="main">
 
-<!-- HOME -->
-<div class="page active" id="home">
-<div class="title">PADELNET ULTRA</div>
+<!-- NOTÍCIES -->
+<div class="page active" id="news">
+<div class="title">📰 NOTÍCIES RECENTS DEL PÀDEL (2026)</div>
 
 <div class="card">
-Benvingut a la web més completa sobre <b>Premier Padel</b>.
-Aquí trobaràs informació professional sobre el circuit mundial, jugadors, estructura i evolució del pàdel modern.
-</div>
-
-<div class="card">
-Premier Padel és el circuit oficial de la Federació Internacional de Pàdel (FIP) i representa el màxim nivell mundial.
-</div>
-</div>
-
-<!-- WHAT -->
-<div class="page" id="what">
-<div class="title">Què és Premier Padel?</div>
-
-<div class="card">
-Premier Padel és un circuit professional creat per unificar el pàdel mundial sota una única estructura competitiva.
-Va començar el 2022 i ha crescut fins a convertir-se en el circuit dominant global.
+🥇 <b>Canvi de lideratge femení</b><br><br>
+🇪🇸 Gemma Triay i 🇦🇷 Delfi Brea són les noves números 1 del món.<br>
+Han superat Josemaría / Ari Sánchez.<br><br>
+📊 Race 2026:<br>
+Triay/Brea ~6.400 punts<br>
+Josemaría/González ~5.400 punts<br>
+👉 Nou domini al circuit femení.
 </div>
 
 <div class="card">
-Inclou jugadors professionals, equips tècnics, patrocinadors internacionals i tornejos en diversos continents.
+🎾 <b>Premier Padel creix (26 tornejos)</b><br><br>
+🌍 26 tornejos en 18 països<br>
+🏟️ 75% indoor<br>
+🆕 Londres, Pretòria, València<br>
+🔥 Nou “Star Point System”<br>
+👉 Expansió global total.
 </div>
 
 <div class="card">
-🌍 Europa, Amèrica, Àfrica i Orient Mitjà  
-🏆 Més de 25 tornejos anuals  
-🎾 Superfície oficial: pista de vidre i sorra sintètica
-</div>
-</div>
-
-<!-- STRUCTURE -->
-<div class="page" id="structure">
-<div class="title">Estructura del circuit</div>
-
-<div class="card">
-El circuit es divideix en categories segons importància:
+🎭 <b>Paquito Navarro viral</b><br><br>
+Es va infiltrar en un torneig amateur disfressat.<br>
+Va jugar com si fos un aficionat i després va revelar la seva identitat.<br>
+👉 Campanya viral del pàdel.
 </div>
 
 <div class="card">
-🏆 MAJORS → màxima puntuació i prestigi  
-🥇 P1 → nivell alt professional  
-🥈 P2 → desenvolupament i ascens  
+🏆 <b>Explosió amateur</b><br><br>
+🎉 Tornejos massius amb +140 parelles<br>
+💰 Premis fins a 7.000€<br>
+📱 Apps de competició en temps real<br>
+👉 El pàdel és ja esport social massiu.
 </div>
 
 <div class="card">
-Els punts determinen:
-- Entrada a tornejos
-- Caps de sèrie
-- Classificació mundial
-</div>
-</div>
-
-<!-- RANKING -->
-<div class="page" id="ranking">
-<div class="title">Sistema de Rànquing</div>
-
-<div class="card">
-El rànquing FIP és un sistema dinàmic basat en punts acumulats en els últims 12 mesos.
+🔥 <b>Canvis en el circuit</b><br><br>
+Coello/Tapia dominen el masculí<br>
+Triay/Brea el femení<br>
+Debats sobre nous formats i puntuació<br>
+👉 Evolució constant del circuit.
 </div>
 
 <div class="card">
-MAJORS: fins a 2000 punts  
-P1: fins a 1000 punts  
-P2: fins a 600 punts  
-</div>
-
-<div class="card">
-Els jugadors han de mantenir rendiment constant per no perdre posicions.
+🧠 <b>Situació general</b><br>
+🏆 Professionalització total<br>
+🌍 Globalització massiva<br>
+🎉 Boom amateur mundial
 </div>
 </div>
 
-<!-- PLAYERS -->
+<!-- JUGADORS -->
 <div class="page" id="players">
-<div class="title">Millors jugadors actuals</div>
+<div class="title">🥇 MILLORS JUGADORS 2026</div>
 
 <div class="card">
-👑 Coello / Tapia  
-Dominen el circuit amb potència, reflexos i intel·ligència tàctica.
-</div>
-
-<div class="card">
-🔥 Galán / Chingotto  
-Parelles molt consistents amb gran control del ritme de joc.
-</div>
-
-<div class="card">
-⚡ Lebrón / Stupa  
-Estil agressiu i espectacular amb punts molt ràpids.
-</div>
-</div>
-
-<!-- CALENDAR -->
-<div class="page" id="calendar">
-<div class="title">Calendari Premier Padel</div>
-
-<div class="card">
-Gener: Doha Major  
-Febrer: Riyadh P1  
-Març: Miami P1  
-Abril: Roma Major  
-Maig: Paris P2  
-Juny: Madrid P1  
-Juliol: Buenos Aires Major  
-Agost: descans competitiu  
-Setembre: Mèxic Major  
-Octubre: Dubai P1  
-Novembre: Finals Barcelona
+🧠 <b>Masculí TOP</b><br>
+🇪🇸 Coello<br>
+🇦🇷 Tapia<br>
+🇪🇸 Galán<br>
+🇦🇷 Chingotto<br>
+🇪🇸 Lebrón<br><br>
+🔥 Coello & Tapia són la parella més forta del món.
 </div>
 
 <div class="card">
-Cada torneig reparteix punts que poden canviar completament el rànquing mundial.
+👑 <b>Femení TOP</b><br>
+🇪🇸 Triay<br>
+🇦🇷 Brea<br>
+🇪🇸 Josemaría<br>
+🇪🇸 Ari Sánchez<br>
+🇪🇸 Bea González<br><br>
+🔥 Espanya domina el circuit femení.
 </div>
 </div>
 
-<!-- HISTORY -->
+<!-- RÀNQUING -->
+<div class="page" id="ranking">
+<div class="title">📊 RÀNQUING FIP 2026</div>
+
+<div class="card">
+🧮 Sistema:<br>
+✔ Últims 12 mesos<br>
+✔ Millors ~22 tornejos<br>
+✔ Punts es defensen cada any
+</div>
+
+<div class="card">
+🏁 Tipus:<br>
+FIP Ranking → mundial oficial<br>
+Race 2026 → temporada actual
+</div>
+</div>
+
+<!-- CIRCUIT -->
+<div class="page" id="structure">
+<div class="title">🏆 ESTRUCTURA PREMIER PADEL</div>
+
+<div class="card">
+🟣 MAJORS → màxim nivell (Grand Slam del pàdel)<br>
+🔵 P1 → alt nivell professional<br>
+🟢 P2 → desenvolupament i punts<br>
+🏁 Finals → només top parelles
+</div>
+
+<div class="card">
+🌍 Expansió:<br>
+Europa, Amèrica, Àfrica, Orient Mitjà, Oceania
+</div>
+
+<div class="card">
+🎯 Objectiu futur:<br>
+Convertir el pàdel en esport olímpic.
+</div>
+</div>
+
+<!-- HISTORIA -->
 <div class="page" id="history">
-<div class="title">Història del pàdel</div>
+<div class="title">📜 HISTÒRIA DEL PÀDEL</div>
 
 <div class="card">
-1969 → Creació a Mèxic per Enrique Corcuera  
-1974 → Expansió a Espanya  
-1990 → Explosió a Argentina  
-2020+ → Professionalització global  
+🇲🇽 1969 → Creació per Enrique Corcuera<br>
+🇦🇷 1980 → explosió Argentina<br>
+🇪🇸 1990 → boom Espanya<br>
+🏆 2022 → Premier Padel<br>
+🌍 2026 → esport global total
 </div>
 
 <div class="card">
-Avui el pàdel és un dels esports amb més creixement del món amb milions de jugadors.
+Abans: esport social<br>
+Ara: esport professional global<br>
+Futur: possible olímpic
 </div>
 </div>
 
-<!-- GAME -->
+<!-- JOC -->
 <div class="page" id="game">
-
-<div class="title">Joc: Raqueta vs Paperera</div>
+<div class="title">🎮 JOC: RAQUETA VS PAPERERA</div>
 
 <div class="card">
 
 <div id="gameBox">
-
 <div id="bin">🗑️</div>
 <div id="ball">🎾</div>
 <div id="racket" onclick="shoot()">🎾</div>
-
 </div>
 
 <div class="center" id="result">Prem la raqueta</div>
 <div class="center">Punts: <span id="score">0</span></div>
 
 </div>
-
 </div>
 
 </div>
