@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PADELNET</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f2f2f2;
+    }
+
+    .app {
+      max-width: 430px;
+      margin: auto;
+      min-height: 100vh;
+      background: white;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .header {
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      background: white;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #00c853;
+    }
+
+    .clock {
+      color: #666;
+      font-weight: bold;
+    }
+
+    .page {
+      display: none;
+      padding: 20px;
+      padding-bottom: 110px;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    .section-title {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 18px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+    }
+
+    .tag {
+      color: #00c853;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 430px;
+      background: white;
+      border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: space-around;
+      padding: 15px 0;
+    }
+
+    .nav-item {
+      font-size: 12px;
+      color: #777;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .nav-item.active {
+      color: #00c853;
+      font-weight: bold;
+    }
+
+    .table-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    #gameBox {
+      height: 300px;
+      background: linear-gradient(to bottom, #4caf50, #1b5e20);
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+      margin-top: 15px;
+    }
+
+    #ball {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 40px;
+      cursor: pointer;
+    }
+
+    #target {
+      width: 70px;
+      height: 70px;
+      background: red;
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <div class="header">
+    <div class="logo">PADELNET</div>
+    <div class="clock" id="clock">00:00</div>
+  </div>
+
+  <!-- HOME / NOTÍCIES -->
+  <div class="page active" id="home">
+    <div class="section-title">NOTÍCIES DESTACADES</div>
+
+    <div class="card">
+      <div class="tag">PREMIER PADEL</div>
+      🏆 Coello i Tapia guanyen el títol masculí a Riyadh.
+    </div>
+
+    <div class="card">
+      <div class="tag">FEMENÍ</div>
+      Andrea Ustero i Ariana Sánchez guanyen el P1.
+    </div>
+
+    <div class="card">
+      <div class="tag">FIP TOUR</div>
+      Noves parelles confirmades per la temporada 2026.
+    </div>
+  </div>
+
+  <!-- NOTÍCIES DETALL -->
+  <div class="page" id="matches">
+    <div class="section-title">ACTUALITAT</div>
+
+    <div class="card">
+      🔄 Noves parelles al circuit professional 2026 amb grans canvis al rànquing.
+    </div>
+
+    <div class="card">
+      📌 Creixement global del pàdel amb tornejos internacionals.
+    </div>
+
+    <div class="card">
+      😂 Humor pàdel: “el meu millor cop és després del partit al bar”
+    </div>
+  </div>
+
+  <!-- RÀNQUING -->
+  <div class="page" id="table">
+    <div class="section-title">RÀNQUING TOP 10</div>
+
+    <div class="card">
+      <div class="table-row"><span>1. Belasteguín</span><span>ARG</span></div>
+      <div class="table-row"><span>2. Juan Martín Díaz</span><span>ARG</span></div>
+      <div class="table-row"><span>3. Coello</span><span>ESP</span></div>
+      <div class="table-row"><span>4. Tapia</span><span>ARG</span></div>
+      <div class="table-row"><span>5. Galán</span><span>ESP</span></div>
+    </div>
+  </div>
+
+  <!-- HISTÒRIA -->
+  <div class="page" id="shop">
+    <div class="section-title">HISTÒRIA DEL PÀDEL</div>
+
+    <div class="card">
+      El pàdel neix el 1969 a Mèxic amb Enrique Corcuera i es popularitza a Espanya als anys 70 gràcies al príncep Alfonso de Hohenlohe.
+      Avui és un esport global amb el circuit Premier Padel.
+    </div>
+
+    <div class="card">
+      Durant els anys 90 creix massivament a Espanya i Argentina fins convertir-se en esport professional.
+    </div>
+  </div>
+
+  <!-- JOC -->
+  <div class="page" id="games">
+    <div class="section-title">JOC 🎾</div>
+
+    <div class="card">
+      <h3>REBOTA I GUANYA</h3>
+
+      <div id="gameBox">
+        <div id="target"></div>
+        <div id="ball" onclick="play()">🎾</div>
+      </div>
+
+      <p id="text" style="text-align:center;margin-top:10px;">Fes clic a la pilota</p>
+      <p style="text-align:center;">Punts: <span id="score">0</span></p>
+    </div>
+  </div>
+
+</div>
+
+<!-- NAV -->
+<div class="bottom-nav">
+  <div class="nav-item active" onclick="show('home', this)">INICI</div>
+  <div class="nav-item" onclick="show('matches', this)">NOTÍCIES</div>
+  <div class="nav-item" onclick="show('table', this)">RÀNQUING</div>
+  <div class="nav-item" onclick="show('shop', this)">HISTÒRIA</div>
+  <div class="nav-item" onclick="show('games', this)">JOC</div>
+</div>
+
+<script>
+function show(id, el){
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  el.classList.add('active');
+}
+
+function clock(){
+  const d = new Date();
+  document.getElementById("clock").innerText =
+    d.getHours() + ":" + String(d.getMinutes()).padStart(2,"0");
+}
+setInterval(clock,1000);
+clock();
+
+let score = 0;
+
+function play(){
+  const ball = document.getElementById("ball");
+  const target = document.getElementById("target");
+  const text = document.getElementById("text");
+
+  let pos = Math.floor(Math.random()*3);
+
+  let left = ["20%","50%","80%"][pos];
+  target.style.left = left;
+  ball.style.left = left;
+
+  setTimeout(()=>{
+    score++;
+    document.getElementById("score").innerText = score;
+    text.innerText = "PUNT!";
+  },400);
+
+  setTimeout(()=>{
+    ball.style.bottom = "20px";
+    ball.style.left = "50%";
+  },800);
+}
+</script>
+
+</body>
+</html>
