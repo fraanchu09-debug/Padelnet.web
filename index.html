@@ -114,6 +114,7 @@ color:#0284c7;
 
 .player p{
 font-size:14px;
+margin-top:5px;
 }
 
 /* JOC */
@@ -157,10 +158,10 @@ font-weight:bold;
 }
 </style>
 </head>
+
 <body>
 
 <div class="sidebar">
-
 <h1>PADELNET 2026</h1>
 
 <div class="menu" onclick="show('news')">📰 Notícies</div>
@@ -169,7 +170,6 @@ font-weight:bold;
 <div class="menu" onclick="show('structure')">🏆 Circuit</div>
 <div class="menu" onclick="show('history')">📜 Història</div>
 <div class="menu" onclick="show('game')">🎮 Joc</div>
-
 </div>
 
 <div class="main">
@@ -183,7 +183,10 @@ font-weight:bold;
 <div class="card">
 🥇 <b>Canvi de lideratge femení</b><br><br>
 🇪🇸 Gemma Triay i 🇦🇷 Delfi Brea són les noves números 1 del món.<br>
-Han superat Josemaría / Ari Sánchez.
+Han superat Josemaría / Ari Sánchez.<br><br>
+📊 Race 2026:<br>
+Triay/Brea ~6.400 punts<br>
+Josemaría/González ~5.400 punts
 </div>
 
 <div class="card">
@@ -200,16 +203,23 @@ Es va infiltrar en un torneig amateur disfressat.
 
 <div class="card">
 🏆 <b>Explosió amateur</b><br><br>
-🎉 Tornejos massius amb +140 parelles
+🎉 Tornejos massius amb +140 parelles<br>
+💰 Premis fins a 7.000€
 </div>
 
 <div class="card">
 🔥 <b>Canvis en el circuit</b><br><br>
-Coello/Tapia dominen el masculí.
+Coello/Tapia dominen el masculí.<br>
+Triay/Brea el femení.
+</div>
+
+<div class="card">
+🧠 <b>Situació general</b><br>
+🏆 Professionalització total<br>
+🌍 Globalització massiva
 </div>
 
 </div>
-
 <!-- JUGADORS -->
 
 <div class="page" id="players">
@@ -218,28 +228,28 @@ Coello/Tapia dominen el masculí.
 
 <div class="card">
 
-<h2 style="color:#0284c7;">
+<h2 style="color:#0284c7;margin-bottom:20px;">
 🔥 TOP MASCULÍ DEL MÓN
 </h2>
 
 <div class="player-grid">
 
 <div class="player">
-<img src="Arturo-Coello-entre-dans-lhistoire-avec-un-24e-titre-Premier-Padel.jpg-removebg-preview.png" alt="Coello">
+<img src="images/Arturo-Coello-entre-dans-lhistoire-avec-un-24e-titre-Premier-Padel.jpg-removebg-preview.png" alt="Arturo Coello">
 <h3>Arturo Coello 🇪🇸</h3>
-<p>Número 1 mundial.</p>
+<p>Número 1 mundial i una de les grans estrelles del pàdel.</p>
 </div>
 
 <div class="player">
-<img src="Augustin_Tapia__cropped_-removebg-preview.png" alt="Tapia">
+<img src="images/Augustin_Tapia__cropped_-removebg-preview.png" alt="Agustín Tapia">
 <h3>Agustín Tapia 🇦🇷</h3>
-<p>La màgia argentina del pàdel.</p>
+<p>Talent, velocitat i espectacle en cada partit.</p>
 </div>
 
 <div class="player">
-<img src="GALAN-6-removebg-preview.png" alt="Galán">
+<img src="images/GALAN-6-removebg-preview.png" alt="Alejandro Galán">
 <h3>Alejandro Galán 🇪🇸</h3>
-<p>Potència i velocitat.</p>
+<p>Un dels jugadors més complets i dominants del circuit.</p>
 </div>
 
 </div>
@@ -260,6 +270,25 @@ Coello/Tapia dominen el masculí.
 🇪🇸 Ari Sánchez<br>
 🇪🇸 Bea González
 
+<br><br>
+
+🔥 Les millors jugadores del món continuen elevant el nivell del pàdel femení.
+
+</div>
+
+<div class="card">
+🏆 Parella número 1 masculina:<br><br>
+🇪🇸 Arturo Coello & 🇦🇷 Agustín Tapia<br><br>
+Han dominat el circuit Premier Padel amb una regularitat espectacular.
+</div>
+
+<div class="card">
+📈 Jugadors destacats del Top 10:<br><br>
+🇪🇸 Alejandro Galán<br>
+🇦🇷 Federico Chingotto<br>
+🇪🇸 Juan Lebrón<br>
+🇪🇸 Paquito Navarro<br>
+🇦🇷 Martín Di Nenno
 </div>
 
 </div>
@@ -270,14 +299,34 @@ Coello/Tapia dominen el masculí.
 <div class="title">📊 RÀNQUING FIP 2026</div>
 
 <div class="card">
-🧮 Sistema:<br>
+🧮 Sistema de puntuació:<br><br>
 ✔ Últims 12 mesos<br>
-✔ Millors 22 tornejos<br>
-✔ Punts defensats anualment
+✔ Millors 22 tornejos comptabilitzats<br>
+✔ Els punts es defensen anualment
 </div>
 
 <div class="card">
-🏁 FIP Ranking i Race 2026
+🏁 Tipus de classificació:<br><br>
+FIP Ranking → classificació oficial mundial<br>
+Race 2026 → classificació de la temporada actual
+</div>
+
+<div class="card">
+🥇 TOP MASCULÍ:<br><br>
+1. Arturo Coello 🇪🇸<br>
+2. Agustín Tapia 🇦🇷<br>
+3. Alejandro Galán 🇪🇸<br>
+4. Federico Chingotto 🇦🇷<br>
+5. Juan Lebrón 🇪🇸
+</div>
+
+<div class="card">
+👑 TOP FEMENÍ:<br><br>
+1. Gemma Triay 🇪🇸<br>
+2. Delfi Brea 🇦🇷<br>
+3. Paula Josemaría 🇪🇸<br>
+4. Ari Sánchez 🇪🇸<br>
+5. Bea González 🇪🇸
 </div>
 
 </div>
@@ -289,14 +338,24 @@ Coello/Tapia dominen el masculí.
 <div class="title">🏆 ESTRUCTURA PREMIER PADEL</div>
 
 <div class="card">
-🟣 MAJORS<br>
-🔵 P1<br>
-🟢 P2<br>
-🏁 Finals
+🟣 MAJORS → màxim nivell del circuit<br>
+🔵 P1 → grans tornejos professionals<br>
+🟢 P2 → desenvolupament i punts<br>
+🏁 Finals → només les millors parelles
 </div>
 
 <div class="card">
-🌍 Europa, Amèrica, Àfrica, Orient Mitjà i Oceania
+🌍 Expansió mundial:<br><br>
+Europa<br>
+Amèrica<br>
+Àfrica<br>
+Orient Mitjà<br>
+Oceania
+</div>
+
+<div class="card">
+🎯 Objectiu futur:<br><br>
+Convertir el pàdel en esport olímpic.
 </div>
 
 </div>
@@ -308,10 +367,23 @@ Coello/Tapia dominen el masculí.
 <div class="title">📜 HISTÒRIA DEL PÀDEL</div>
 
 <div class="card">
-🇲🇽 1969 → Enrique Corcuera<br>
-🇦🇷 1980 → Boom argentí<br>
-🇪🇸 1990 → Boom espanyol<br>
-🏆 2022 → Premier Padel
+🇲🇽 1969 → Enrique Corcuera crea el pàdel a Mèxic.
+</div>
+
+<div class="card">
+🇦🇷 1980 → gran expansió a l'Argentina.
+</div>
+
+<div class="card">
+🇪🇸 1990 → boom espectacular a Espanya.
+</div>
+
+<div class="card">
+🏆 2022 → naixement del circuit Premier Padel.
+</div>
+
+<div class="card">
+🌍 2026 → esport global amb milions de jugadors.
 </div>
 
 </div>
@@ -352,52 +424,53 @@ Punts: <span id="score">0</span>
 
 function show(id){
 document.querySelectorAll('.page').forEach(
-p=>p.classList.remove('active')
+p => p.classList.remove('active')
 );
 document.getElementById(id).classList.add('active');
 }
 
-let score=0;
+let score = 0;
 
 setInterval(()=>{
-document.getElementById("bin").style.left=
+document.getElementById("bin").style.left =
 (Math.random()*60+20)+"%";
 },1200);
 
 function shoot(){
 
-const ball=document.getElementById("ball");
-const bin=document.getElementById("bin");
-const result=document.getElementById("result");
+const ball = document.getElementById("ball");
+const bin = document.getElementById("bin");
+const result = document.getElementById("result");
 
-ball.style.display="block";
+ball.style.display = "block";
 
-let y=90;
+let y = 90;
 
-let anim=setInterval(()=>{
+let anim = setInterval(()=>{
 
-y+=10;
-ball.style.bottom=y+"px";
+y += 10;
+ball.style.bottom = y + "px";
 
-if(y>320){
+if(y > 320){
 
 clearInterval(anim);
 
-if(Math.abs(ball.offsetLeft-bin.offsetLeft)<70){
+if(Math.abs(ball.offsetLeft - bin.offsetLeft) < 70){
 
 score++;
 
-document.getElementById("score").innerText=score;
+document.getElementById("score").innerText = score;
 
-result.innerText="🎯 ENCERT!";
+result.innerText = "🎯 ENCERT!";
 
 }else{
 
-result.innerText="❌ FALLAT!";
+result.innerText = "❌ FALLAT!";
 }
 
-ball.style.display="none";
-ball.style.bottom="90px";
+ball.style.display = "none";
+ball.style.bottom = "90px";
+
 }
 
 },20);
