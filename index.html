@@ -3,26 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PADELNET</title>
+<title>PADELNET ULTRA - Premier Padel</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{display:flex;min-height:100vh;background:#0ea5e9}
 
-/* 🌐 LAYOUT HORITZONTAL */
-body{
-display:flex;
-min-height:100vh;
-background:linear-gradient(135deg,#0ea5e9,#f97316);
-}
-
-/* MENÚ LATERAL */
+/* SIDEBAR */
 .sidebar{
-width:220px;
+width:260px;
 background:linear-gradient(#0284c7,#f97316);
 color:white;
 padding:20px;
@@ -31,58 +20,48 @@ flex-direction:column;
 gap:10px;
 }
 
-.sidebar h1{
-font-size:26px;
-margin-bottom:10px;
-}
+.sidebar h1{font-size:26px}
 
-.menu-item{
+.menu{
 padding:10px;
-cursor:pointer;
-border-radius:10px;
 background:rgba(255,255,255,0.15);
-font-size:14px;
+border-radius:10px;
+cursor:pointer;
 }
 
-.menu-item:hover{
-background:rgba(255,255,255,0.3);
-}
+.menu:hover{background:rgba(255,255,255,0.3)}
 
 /* CONTINGUT */
 .main{
 flex:1;
 background:white;
-padding:20px;
+padding:25px;
 overflow-y:auto;
 }
 
-.page{
-display:none;
-}
+.page{display:none}
+.page.active{display:block}
 
-.page.active{
-display:block;
-}
-
-.section-title{
-font-size:26px;
+.title{
+font-size:30px;
 color:#0284c7;
-margin-bottom:15px;
 font-weight:bold;
+margin-bottom:15px;
 }
 
 .card{
-background:#fff;
+background:white;
 padding:15px;
-border-radius:15px;
 margin-bottom:15px;
+border-left:6px solid #f97316;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
-border-left:5px solid #f97316;
+border-radius:12px;
+line-height:1.6;
 }
 
 /* JOC */
 #gameBox{
-height:400px;
+height:420px;
 background:linear-gradient(#bae6fd,#fed7aa);
 border-radius:20px;
 position:relative;
@@ -113,122 +92,167 @@ font-size:70px;
 cursor:pointer;
 }
 
-.result, .score{
-text-align:center;
-margin-top:10px;
-font-weight:bold;
-}
+.center{text-align:center;margin-top:10px;font-weight:bold}
 </style>
 </head>
 
 <body>
 
-<!-- MENÚ -->
+<!-- MENU -->
 <div class="sidebar">
 <h1>PADELNET</h1>
 
-<div class="menu-item" onclick="show('home')">Inici</div>
-<div class="menu-item" onclick="show('news')">Notícies</div>
-<div class="menu-item" onclick="show('ranking')">Rànquing</div>
-<div class="menu-item" onclick="show('players')">Jugadors</div>
-<div class="menu-item" onclick="show('history')">Història</div>
-<div class="menu-item" onclick="show('rules')">Regles</div>
-<div class="menu-item" onclick="show('game')">Joc</div>
+<div class="menu" onclick="show('home')">Inici</div>
+<div class="menu" onclick="show('what')">Què és Premier Padel</div>
+<div class="menu" onclick="show('structure')">Estructura</div>
+<div class="menu" onclick="show('ranking')">Rànquing</div>
+<div class="menu" onclick="show('players')">Jugadors</div>
+<div class="menu" onclick="show('calendar')">Calendari</div>
+<div class="menu" onclick="show('history')">Història</div>
+<div class="menu" onclick="show('game')">Joc</div>
 </div>
 
 <!-- CONTINGUT -->
 <div class="main">
 
-<!-- INICI -->
+<!-- HOME -->
 <div class="page active" id="home">
-<div class="section-title">Inici</div>
+<div class="title">PADELNET ULTRA</div>
 
 <div class="card">
-PADELNET és una web sobre el món del pàdel amb notícies, jugadors i joc interactiu.
-</div>
-
-<div class="card">
-El pàdel és un esport en creixement global amb competicions professionals com Premier Padel.
-</div>
-</div>
-
-<!-- NOTICIES -->
-<div class="page" id="news">
-<div class="section-title">Notícies 2026</div>
-
-<div class="card">
-🏆 Premier Padel 2026 creix amb 26 tornejos en 18 països.
+Benvingut a la web més completa sobre <b>Premier Padel</b>.
+Aquí trobaràs informació professional sobre el circuit mundial, jugadors, estructura i evolució del pàdel modern.
 </div>
 
 <div class="card">
-🌍 Noves seus com Londres i Pretòria entren al circuit oficial.
+Premier Padel és el circuit oficial de la Federació Internacional de Pàdel (FIP) i representa el màxim nivell mundial.
+</div>
+</div>
+
+<!-- WHAT -->
+<div class="page" id="what">
+<div class="title">Què és Premier Padel?</div>
+
+<div class="card">
+Premier Padel és un circuit professional creat per unificar el pàdel mundial sota una única estructura competitiva.
+Va començar el 2022 i ha crescut fins a convertir-se en el circuit dominant global.
 </div>
 
 <div class="card">
-📈 El sistema “Star Point” canvia la puntuació professional.
+Inclou jugadors professionals, equips tècnics, patrocinadors internacionals i tornejos en diversos continents.
 </div>
 
 <div class="card">
-🔥 Augment de públic i expansió global del pàdel.
+🌍 Europa, Amèrica, Àfrica i Orient Mitjà  
+🏆 Més de 25 tornejos anuals  
+🎾 Superfície oficial: pista de vidre i sorra sintètica
 </div>
 </div>
 
-<!-- RANQUING -->
+<!-- STRUCTURE -->
+<div class="page" id="structure">
+<div class="title">Estructura del circuit</div>
+
+<div class="card">
+El circuit es divideix en categories segons importància:
+</div>
+
+<div class="card">
+🏆 MAJORS → màxima puntuació i prestigi  
+🥇 P1 → nivell alt professional  
+🥈 P2 → desenvolupament i ascens  
+</div>
+
+<div class="card">
+Els punts determinen:
+- Entrada a tornejos
+- Caps de sèrie
+- Classificació mundial
+</div>
+</div>
+
+<!-- RANKING -->
 <div class="page" id="ranking">
-<div class="section-title">Rànquing</div>
+<div class="title">Sistema de Rànquing</div>
 
 <div class="card">
-1. Coello / Tapia<br>
-2. Galán / Chingotto<br>
-3. Lebrón / Navarro<br>
-4. Stupa / Di Nenno
+El rànquing FIP és un sistema dinàmic basat en punts acumulats en els últims 12 mesos.
+</div>
+
+<div class="card">
+MAJORS: fins a 2000 punts  
+P1: fins a 1000 punts  
+P2: fins a 600 punts  
+</div>
+
+<div class="card">
+Els jugadors han de mantenir rendiment constant per no perdre posicions.
 </div>
 </div>
 
-<!-- JUGADORS -->
+<!-- PLAYERS -->
 <div class="page" id="players">
-<div class="section-title">Jugadors</div>
+<div class="title">Millors jugadors actuals</div>
 
 <div class="card">
-Arturo Coello i Agustín Tapia dominen el circuit actual.
+👑 Coello / Tapia  
+Dominen el circuit amb potència, reflexos i intel·ligència tàctica.
 </div>
 
 <div class="card">
-Alejandro Galán destaca per potència i control.
+🔥 Galán / Chingotto  
+Parelles molt consistents amb gran control del ritme de joc.
+</div>
+
+<div class="card">
+⚡ Lebrón / Stupa  
+Estil agressiu i espectacular amb punts molt ràpids.
 </div>
 </div>
 
-<!-- HISTORIA -->
+<!-- CALENDAR -->
+<div class="page" id="calendar">
+<div class="title">Calendari Premier Padel</div>
+
+<div class="card">
+Gener: Doha Major  
+Febrer: Riyadh P1  
+Març: Miami P1  
+Abril: Roma Major  
+Maig: Paris P2  
+Juny: Madrid P1  
+Juliol: Buenos Aires Major  
+Agost: descans competitiu  
+Setembre: Mèxic Major  
+Octubre: Dubai P1  
+Novembre: Finals Barcelona
+</div>
+
+<div class="card">
+Cada torneig reparteix punts que poden canviar completament el rànquing mundial.
+</div>
+</div>
+
+<!-- HISTORY -->
 <div class="page" id="history">
-<div class="section-title">Història</div>
+<div class="title">Història del pàdel</div>
 
 <div class="card">
-1969: neix el pàdel a Mèxic.
+1969 → Creació a Mèxic per Enrique Corcuera  
+1974 → Expansió a Espanya  
+1990 → Explosió a Argentina  
+2020+ → Professionalització global  
 </div>
 
 <div class="card">
-1974: arriba a Espanya.
-</div>
-
-<div class="card">
-2026: esport global professional.
+Avui el pàdel és un dels esports amb més creixement del món amb milions de jugadors.
 </div>
 </div>
 
-<!-- REGLES -->
-<div class="page" id="rules">
-<div class="section-title">Regles</div>
-
-<div class="card">✔ 2 contra 2</div>
-<div class="card">✔ Servei per sota</div>
-<div class="card">✔ Rebots a parets</div>
-<div class="card">✔ Sistema tennis</div>
-</div>
-
-<!-- JOC -->
+<!-- GAME -->
 <div class="page" id="game">
 
-<div class="section-title">Joc: Raqueta i paperera</div>
+<div class="title">Joc: Raqueta vs Paperera</div>
 
 <div class="card">
 
@@ -240,8 +264,8 @@ Alejandro Galán destaca per potència i control.
 
 </div>
 
-<div class="result" id="result">Prem la raqueta</div>
-<div class="score">Punts: <span id="score">0</span></div>
+<div class="center" id="result">Prem la raqueta</div>
+<div class="center">Punts: <span id="score">0</span></div>
 
 </div>
 
@@ -259,8 +283,7 @@ document.getElementById(id).classList.add('active');
 let score=0;
 
 setInterval(()=>{
-document.getElementById("bin").style.left =
-(Math.random()*60+20)+"%";
+document.getElementById("bin").style.left=(Math.random()*60+20)+"%";
 },1200);
 
 function shoot(){
@@ -273,11 +296,10 @@ ball.style.display="block";
 let y=90;
 
 let anim=setInterval(()=>{
-
 y+=10;
 ball.style.bottom=y+"px";
 
-if(y>300){
+if(y>320){
 clearInterval(anim);
 
 if(Math.abs(ball.offsetLeft-bin.offsetLeft)<70){
