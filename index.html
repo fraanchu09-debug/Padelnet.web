@@ -13,40 +13,51 @@ box-sizing:border-box;
 font-family:Arial,sans-serif;
 }
 
+/* 🌐 LAYOUT HORITZONTAL */
 body{
+display:flex;
+min-height:100vh;
 background:linear-gradient(135deg,#0ea5e9,#f97316);
 }
 
-.app{
-max-width:430px;
-margin:auto;
-background:white;
-min-height:100vh;
-}
-
-.header{
-background:linear-gradient(90deg,#0284c7,#f97316);
-padding:20px;
+/* MENÚ LATERAL */
+.sidebar{
+width:220px;
+background:linear-gradient(#0284c7,#f97316);
 color:white;
-position:sticky;
-top:0;
-z-index:100;
+padding:20px;
+display:flex;
+flex-direction:column;
+gap:10px;
 }
 
-.logo{
-font-size:30px;
-font-weight:bold;
+.sidebar h1{
+font-size:26px;
+margin-bottom:10px;
 }
 
-.clock{
-font-size:18px;
-margin-top:5px;
+.menu-item{
+padding:10px;
+cursor:pointer;
+border-radius:10px;
+background:rgba(255,255,255,0.15);
+font-size:14px;
+}
+
+.menu-item:hover{
+background:rgba(255,255,255,0.3);
+}
+
+/* CONTINGUT */
+.main{
+flex:1;
+background:white;
+padding:20px;
+overflow-y:auto;
 }
 
 .page{
 display:none;
-padding:20px;
-padding-bottom:120px;
 }
 
 .page.active{
@@ -54,58 +65,24 @@ display:block;
 }
 
 .section-title{
-font-size:25px;
-font-weight:bold;
+font-size:26px;
 color:#0284c7;
 margin-bottom:15px;
+font-weight:bold;
 }
 
 .card{
-background:white;
+background:#fff;
 padding:15px;
 border-radius:15px;
 margin-bottom:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.15);
-border-left:6px solid #f97316;
-}
-
-.bottom-nav{
-position:fixed;
-bottom:0;
-left:50%;
-transform:translateX(-50%);
-width:100%;
-max-width:430px;
-background:linear-gradient(90deg,#0284c7,#f97316);
-display:flex;
-justify-content:space-around;
-padding:12px 0;
-overflow-x:auto;
-}
-
-.nav-item{
-color:white;
-font-size:10px;
-cursor:pointer;
-text-align:center;
-padding:0 5px;
-}
-
-.nav-item.active{
-font-weight:bold;
-}
-
-.table-row{
-display:flex;
-justify-content:space-between;
-padding:8px 0;
-border-bottom:1px solid #eee;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+border-left:5px solid #f97316;
 }
 
 /* JOC */
-
 #gameBox{
-height:350px;
+height:400px;
 background:linear-gradient(#bae6fd,#fed7aa);
 border-radius:20px;
 position:relative;
@@ -114,17 +91,16 @@ overflow:hidden;
 
 #bin{
 position:absolute;
-top:40px;
+top:50px;
 left:50%;
-font-size:60px;
+font-size:70px;
 transform:translateX(-50%);
 }
 
 #ball{
 position:absolute;
-bottom:85px;
+bottom:90px;
 left:50%;
-transform:translateX(-50%);
 font-size:35px;
 display:none;
 }
@@ -133,21 +109,13 @@ display:none;
 position:absolute;
 bottom:10px;
 left:50%;
-transform:translateX(-50%);
 font-size:70px;
 cursor:pointer;
 }
 
-.score{
+.result, .score{
 text-align:center;
 margin-top:10px;
-font-weight:bold;
-}
-
-.result{
-text-align:center;
-margin-top:10px;
-font-size:18px;
 font-weight:bold;
 }
 </style>
@@ -155,111 +123,124 @@ font-weight:bold;
 
 <body>
 
-<div class="app">
+<!-- MENÚ -->
+<div class="sidebar">
+<h1>PADELNET</h1>
 
-<div class="header">
-<div class="logo">PADELNET</div>
-<div class="clock" id="clock"></div>
+<div class="menu-item" onclick="show('home')">Inici</div>
+<div class="menu-item" onclick="show('news')">Notícies</div>
+<div class="menu-item" onclick="show('ranking')">Rànquing</div>
+<div class="menu-item" onclick="show('players')">Jugadors</div>
+<div class="menu-item" onclick="show('history')">Història</div>
+<div class="menu-item" onclick="show('rules')">Regles</div>
+<div class="menu-item" onclick="show('game')">Joc</div>
 </div>
+
+<!-- CONTINGUT -->
+<div class="main">
 
 <!-- INICI -->
 <div class="page active" id="home">
-<div class="section-title">INICI</div>
+<div class="section-title">Inici</div>
 
 <div class="card">
-PADELNET és una pàgina web dedicada al món del pàdel.
+PADELNET és una web sobre el món del pàdel amb notícies, jugadors i joc interactiu.
 </div>
 
 <div class="card">
-Trobaràs notícies, rànquings, jugadors, història, regles i un joc interactiu.
-</div>
-
-<div class="card">
-El pàdel és un dels esports que més creix al món.
+El pàdel és un esport en creixement global amb competicions professionals com Premier Padel.
 </div>
 </div>
 
 <!-- NOTICIES -->
 <div class="page" id="news">
-<div class="section-title">NOTÍCIES</div>
+<div class="section-title">Notícies 2026</div>
 
-<div class="card">🏆 Coello i Tapia segueixen dominant el circuit.</div>
-<div class="card">🔥 Noves parelles preparen la temporada.</div>
-<div class="card">🌍 El pàdel creix a tot el món.</div>
-<div class="card">📈 Premier Padel s’expandeix internacionalment.</div>
+<div class="card">
+🏆 Premier Padel 2026 creix amb 26 tornejos en 18 països.
+</div>
+
+<div class="card">
+🌍 Noves seus com Londres i Pretòria entren al circuit oficial.
+</div>
+
+<div class="card">
+📈 El sistema “Star Point” canvia la puntuació professional.
+</div>
+
+<div class="card">
+🔥 Augment de públic i expansió global del pàdel.
+</div>
 </div>
 
 <!-- RANQUING -->
 <div class="page" id="ranking">
-<div class="section-title">RÀNQUING</div>
+<div class="section-title">Rànquing</div>
 
 <div class="card">
-<div class="table-row"><span>1. Belasteguín</span></div>
-<div class="table-row"><span>2. Juan Martín Díaz</span></div>
-<div class="table-row"><span>3. Coello</span></div>
-<div class="table-row"><span>4. Tapia</span></div>
-<div class="table-row"><span>5. Galán</span></div>
+1. Coello / Tapia<br>
+2. Galán / Chingotto<br>
+3. Lebrón / Navarro<br>
+4. Stupa / Di Nenno
 </div>
 </div>
 
 <!-- JUGADORS -->
 <div class="page" id="players">
-<div class="section-title">JUGADORS</div>
+<div class="section-title">Jugadors</div>
 
-<div class="card">Belasteguín és llegenda del pàdel.</div>
-<div class="card">Juan Martín Díaz va dominar una era.</div>
-<div class="card">Coello és una estrella actual.</div>
-<div class="card">Tapia destaca pel seu talent.</div>
+<div class="card">
+Arturo Coello i Agustín Tapia dominen el circuit actual.
+</div>
+
+<div class="card">
+Alejandro Galán destaca per potència i control.
+</div>
 </div>
 
 <!-- HISTORIA -->
 <div class="page" id="history">
-<div class="section-title">HISTÒRIA</div>
+<div class="section-title">Història</div>
 
-<div class="card">1969: neix el pàdel a Mèxic.</div>
-<div class="card">1974: arriba a Espanya.</div>
-<div class="card">1990: creixement massiu.</div>
-<div class="card">Actualment és global.</div>
+<div class="card">
+1969: neix el pàdel a Mèxic.
+</div>
+
+<div class="card">
+1974: arriba a Espanya.
+</div>
+
+<div class="card">
+2026: esport global professional.
+</div>
 </div>
 
 <!-- REGLES -->
 <div class="page" id="rules">
-<div class="section-title">REGLES</div>
+<div class="section-title">Regles</div>
 
 <div class="card">✔ 2 contra 2</div>
 <div class="card">✔ Servei per sota</div>
-<div class="card">✔ La pilota pot rebotar a parets</div>
-<div class="card">✔ Puntuació tennis</div>
-</div>
-
-<!-- ACUDITS -->
-<div class="page" id="jokes">
-<div class="section-title">ACUDITS</div>
-
-<div class="card">😂 El meu millor cop és el del bar.</div>
-<div class="card">😂 No fallo volees… experimento.</div>
-<div class="card">😂 Intento passar la xarxa.</div>
+<div class="card">✔ Rebots a parets</div>
+<div class="card">✔ Sistema tennis</div>
 </div>
 
 <!-- JOC -->
 <div class="page" id="game">
 
-<div class="section-title">JOC: TENNIS A LA PAPERERA</div>
+<div class="section-title">Joc: Raqueta i paperera</div>
 
 <div class="card">
 
 <div id="gameBox">
 
 <div id="bin">🗑️</div>
-
 <div id="ball">🎾</div>
-
 <div id="racket" onclick="shoot()">🎾</div>
 
 </div>
 
 <div class="result" id="result">Prem la raqueta</div>
-
 <div class="score">Punts: <span id="score">0</span></div>
 
 </div>
@@ -268,68 +249,38 @@ El pàdel és un dels esports que més creix al món.
 
 </div>
 
-<!-- MENU -->
-<div class="bottom-nav">
-
-<div class="nav-item active" onclick="showPage('home',this)">INICI</div>
-<div class="nav-item" onclick="showPage('news',this)">NOTÍCIES</div>
-<div class="nav-item" onclick="showPage('ranking',this)">TOP</div>
-<div class="nav-item" onclick="showPage('players',this)">JUGADORS</div>
-<div class="nav-item" onclick="showPage('history',this)">HISTÒRIA</div>
-<div class="nav-item" onclick="showPage('rules',this)">REGLES</div>
-<div class="nav-item" onclick="showPage('jokes',this)">ACUDITS</div>
-<div class="nav-item" onclick="showPage('game',this)">JOC</div>
-
-</div>
-
 <script>
 
-function showPage(id,el){
+function show(id){
 document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
 document.getElementById(id).classList.add('active');
-
-document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
-el.classList.add('active');
 }
-
-function updateClock(){
-const d=new Date();
-document.getElementById('clock').innerHTML =
-d.getHours()+":"+
-String(d.getMinutes()).padStart(2,"0");
-}
-setInterval(updateClock,1000);
-updateClock();
 
 let score=0;
 
 setInterval(()=>{
-let pos=Math.random()*70+10;
-document.getElementById("bin").style.left=pos+"%";
+document.getElementById("bin").style.left =
+(Math.random()*60+20)+"%";
 },1200);
 
 function shoot(){
-
 const ball=document.getElementById("ball");
 const bin=document.getElementById("bin");
 const result=document.getElementById("result");
 
 ball.style.display="block";
 
-let y=85;
+let y=90;
 
-const anim=setInterval(()=>{
+let anim=setInterval(()=>{
 
 y+=10;
 ball.style.bottom=y+"px";
 
-if(y>250){
+if(y>300){
 clearInterval(anim);
 
-const ballX=ball.offsetLeft;
-const binX=bin.offsetLeft;
-
-if(Math.abs(ballX-binX)<70){
+if(Math.abs(ball.offsetLeft-bin.offsetLeft)<70){
 score++;
 document.getElementById("score").innerText=score;
 result.innerText="🎯 ENCERT!";
@@ -338,9 +289,8 @@ result.innerText="❌ FALLAT!";
 }
 
 ball.style.display="none";
-ball.style.bottom="85px";
+ball.style.bottom="90px";
 }
-
 },20);
 }
 
