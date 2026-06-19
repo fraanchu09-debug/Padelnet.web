@@ -6,10 +6,21 @@
 <title>PADELNET 2026 - Portal Oficial</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
-body{display:flex;min-height:100vh;background:#0ea5e9}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+display:flex;
+min-height:100vh;
+background:#0ea5e9;
+}
 
 /* MENU */
+
 .sidebar{
 width:270px;
 background:linear-gradient(#0284c7,#f97316);
@@ -20,7 +31,9 @@ flex-direction:column;
 gap:10px;
 }
 
-.sidebar h1{font-size:26px}
+.sidebar h1{
+font-size:26px;
+}
 
 .menu{
 padding:10px;
@@ -29,9 +42,13 @@ background:rgba(255,255,255,0.15);
 cursor:pointer;
 font-size:14px;
 }
-.menu:hover{background:rgba(255,255,255,0.3)}
+
+.menu:hover{
+background:rgba(255,255,255,0.3);
+}
 
 /* CONTINGUT */
+
 .main{
 flex:1;
 background:white;
@@ -39,8 +56,13 @@ padding:25px;
 overflow-y:auto;
 }
 
-.page{display:none}
-.page.active{display:block}
+.page{
+display:none;
+}
+
+.page.active{
+display:block;
+}
 
 .title{
 font-size:30px;
@@ -59,7 +81,43 @@ box-shadow:0 5px 15px rgba(0,0,0,0.1);
 line-height:1.6;
 }
 
+/* JUGADORS */
+
+.player-grid{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.player{
+text-align:center;
+width:220px;
+}
+
+.player img{
+width:100%;
+height:280px;
+object-fit:contain;
+transition:0.3s;
+}
+
+.player img:hover{
+transform:scale(1.05);
+}
+
+.player h3{
+margin-top:10px;
+color:#0284c7;
+}
+
+.player p{
+font-size:14px;
+}
+
 /* JOC */
+
 #gameBox{
 height:420px;
 background:linear-gradient(#bae6fd,#fed7aa);
@@ -92,14 +150,17 @@ font-size:70px;
 cursor:pointer;
 }
 
-.center{text-align:center;margin-top:10px;font-weight:bold}
+.center{
+text-align:center;
+margin-top:10px;
+font-weight:bold;
+}
 </style>
 </head>
-
 <body>
 
-<!-- MENU -->
 <div class="sidebar">
+
 <h1>PADELNET 2026</h1>
 
 <div class="menu" onclick="show('news')">📰 Notícies</div>
@@ -108,165 +169,181 @@ cursor:pointer;
 <div class="menu" onclick="show('structure')">🏆 Circuit</div>
 <div class="menu" onclick="show('history')">📜 Història</div>
 <div class="menu" onclick="show('game')">🎮 Joc</div>
+
 </div>
 
-<!-- CONTINGUT -->
 <div class="main">
 
 <!-- NOTÍCIES -->
+
 <div class="page active" id="news">
+
 <div class="title">📰 NOTÍCIES RECENTS DEL PÀDEL (2026)</div>
 
 <div class="card">
 🥇 <b>Canvi de lideratge femení</b><br><br>
 🇪🇸 Gemma Triay i 🇦🇷 Delfi Brea són les noves números 1 del món.<br>
-Han superat Josemaría / Ari Sánchez.<br><br>
-📊 Race 2026:<br>
-Triay/Brea ~6.400 punts<br>
-Josemaría/González ~5.400 punts<br>
-👉 Nou domini al circuit femení.
+Han superat Josemaría / Ari Sánchez.
 </div>
 
 <div class="card">
 🎾 <b>Premier Padel creix (26 tornejos)</b><br><br>
 🌍 26 tornejos en 18 països<br>
 🏟️ 75% indoor<br>
-🆕 Londres, Pretòria, València<br>
-🔥 Nou “Star Point System”<br>
-👉 Expansió global total.
+🆕 Londres, Pretòria, València
 </div>
 
 <div class="card">
 🎭 <b>Paquito Navarro viral</b><br><br>
-Es va infiltrar en un torneig amateur disfressat.<br>
-Va jugar com si fos un aficionat i després va revelar la seva identitat.<br>
-👉 Campanya viral del pàdel.
+Es va infiltrar en un torneig amateur disfressat.
 </div>
 
 <div class="card">
 🏆 <b>Explosió amateur</b><br><br>
-🎉 Tornejos massius amb +140 parelles<br>
-💰 Premis fins a 7.000€<br>
-📱 Apps de competició en temps real<br>
-👉 El pàdel és ja esport social massiu.
+🎉 Tornejos massius amb +140 parelles
 </div>
 
 <div class="card">
 🔥 <b>Canvis en el circuit</b><br><br>
-Coello/Tapia dominen el masculí<br>
-Triay/Brea el femení<br>
-Debats sobre nous formats i puntuació<br>
-👉 Evolució constant del circuit.
+Coello/Tapia dominen el masculí.
 </div>
 
-<div class="card">
-🧠 <b>Situació general</b><br>
-🏆 Professionalització total<br>
-🌍 Globalització massiva<br>
-🎉 Boom amateur mundial
-</div>
 </div>
 
 <!-- JUGADORS -->
+
 <div class="page" id="players">
+
 <div class="title">🥇 MILLORS JUGADORS 2026</div>
 
 <div class="card">
-🧠 <b>Masculí TOP</b><br>
-🇪🇸 Coello<br>
-🇦🇷 Tapia<br>
-🇪🇸 Galán<br>
-🇦🇷 Chingotto<br>
-🇪🇸 Lebrón<br><br>
-🔥 Coello & Tapia són la parella més forta del món.
+
+<h2 style="color:#0284c7;">
+🔥 TOP MASCULÍ DEL MÓN
+</h2>
+
+<div class="player-grid">
+
+<div class="player">
+<img src="Arturo-Coello-entre-dans-lhistoire-avec-un-24e-titre-Premier-Padel.jpg-removebg-preview.png" alt="Coello">
+<h3>Arturo Coello 🇪🇸</h3>
+<p>Número 1 mundial.</p>
+</div>
+
+<div class="player">
+<img src="Augustin_Tapia__cropped_-removebg-preview.png" alt="Tapia">
+<h3>Agustín Tapia 🇦🇷</h3>
+<p>La màgia argentina del pàdel.</p>
+</div>
+
+<div class="player">
+<img src="GALAN-6-removebg-preview.png" alt="Galán">
+<h3>Alejandro Galán 🇪🇸</h3>
+<p>Potència i velocitat.</p>
+</div>
+
+</div>
+
 </div>
 
 <div class="card">
-👑 <b>Femení TOP</b><br>
-🇪🇸 Triay<br>
-🇦🇷 Brea<br>
-🇪🇸 Josemaría<br>
+
+<h2 style="color:#f97316;">
+👑 TOP FEMENÍ
+</h2>
+
+<br>
+
+🇪🇸 Gemma Triay<br>
+🇦🇷 Delfi Brea<br>
+🇪🇸 Paula Josemaría<br>
 🇪🇸 Ari Sánchez<br>
-🇪🇸 Bea González<br><br>
-🔥 Espanya domina el circuit femení.
-</div>
+🇪🇸 Bea González
+
 </div>
 
+</div>
 <!-- RÀNQUING -->
+
 <div class="page" id="ranking">
+
 <div class="title">📊 RÀNQUING FIP 2026</div>
 
 <div class="card">
 🧮 Sistema:<br>
 ✔ Últims 12 mesos<br>
-✔ Millors ~22 tornejos<br>
-✔ Punts es defensen cada any
+✔ Millors 22 tornejos<br>
+✔ Punts defensats anualment
 </div>
 
 <div class="card">
-🏁 Tipus:<br>
-FIP Ranking → mundial oficial<br>
-Race 2026 → temporada actual
+🏁 FIP Ranking i Race 2026
 </div>
+
 </div>
 
 <!-- CIRCUIT -->
+
 <div class="page" id="structure">
+
 <div class="title">🏆 ESTRUCTURA PREMIER PADEL</div>
 
 <div class="card">
-🟣 MAJORS → màxim nivell (Grand Slam del pàdel)<br>
-🔵 P1 → alt nivell professional<br>
-🟢 P2 → desenvolupament i punts<br>
-🏁 Finals → només top parelles
+🟣 MAJORS<br>
+🔵 P1<br>
+🟢 P2<br>
+🏁 Finals
 </div>
 
 <div class="card">
-🌍 Expansió:<br>
-Europa, Amèrica, Àfrica, Orient Mitjà, Oceania
+🌍 Europa, Amèrica, Àfrica, Orient Mitjà i Oceania
 </div>
 
-<div class="card">
-🎯 Objectiu futur:<br>
-Convertir el pàdel en esport olímpic.
-</div>
 </div>
 
-<!-- HISTORIA -->
+<!-- HISTÒRIA -->
+
 <div class="page" id="history">
+
 <div class="title">📜 HISTÒRIA DEL PÀDEL</div>
 
 <div class="card">
-🇲🇽 1969 → Creació per Enrique Corcuera<br>
-🇦🇷 1980 → explosió Argentina<br>
-🇪🇸 1990 → boom Espanya<br>
-🏆 2022 → Premier Padel<br>
-🌍 2026 → esport global total
+🇲🇽 1969 → Enrique Corcuera<br>
+🇦🇷 1980 → Boom argentí<br>
+🇪🇸 1990 → Boom espanyol<br>
+🏆 2022 → Premier Padel
 </div>
 
-<div class="card">
-Abans: esport social<br>
-Ara: esport professional global<br>
-Futur: possible olímpic
-</div>
 </div>
 
 <!-- JOC -->
+
 <div class="page" id="game">
+
 <div class="title">🎮 JOC: RAQUETA VS PAPERERA</div>
 
 <div class="card">
 
 <div id="gameBox">
+
 <div id="bin">🗑️</div>
+
 <div id="ball">🎾</div>
+
 <div id="racket" onclick="shoot()">🎾</div>
-</div>
-
-<div class="center" id="result">Prem la raqueta</div>
-<div class="center">Punts: <span id="score">0</span></div>
 
 </div>
+
+<div class="center" id="result">
+Prem la raqueta
+</div>
+
+<div class="center">
+Punts: <span id="score">0</span>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -274,17 +351,21 @@ Futur: possible olímpic
 <script>
 
 function show(id){
-document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.querySelectorAll('.page').forEach(
+p=>p.classList.remove('active')
+);
 document.getElementById(id).classList.add('active');
 }
 
 let score=0;
 
 setInterval(()=>{
-document.getElementById("bin").style.left=(Math.random()*60+20)+"%";
+document.getElementById("bin").style.left=
+(Math.random()*60+20)+"%";
 },1200);
 
 function shoot(){
+
 const ball=document.getElementById("ball");
 const bin=document.getElementById("bin");
 const result=document.getElementById("result");
@@ -294,24 +375,33 @@ ball.style.display="block";
 let y=90;
 
 let anim=setInterval(()=>{
+
 y+=10;
 ball.style.bottom=y+"px";
 
 if(y>320){
+
 clearInterval(anim);
 
 if(Math.abs(ball.offsetLeft-bin.offsetLeft)<70){
+
 score++;
+
 document.getElementById("score").innerText=score;
+
 result.innerText="🎯 ENCERT!";
+
 }else{
+
 result.innerText="❌ FALLAT!";
 }
 
 ball.style.display="none";
 ball.style.bottom="90px";
 }
+
 },20);
+
 }
 
 </script>
